@@ -1,22 +1,8 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
 
 function HomeWashing() {
   return (
     <div>
-      {/* ✅ SEO Metadata */}
-      <Helmet>
-        <title>Home Car Washing Service | Professional Car Cleaning & Detailing</title>
-        <meta
-          name="description"
-          content="Experience top-quality home car washing with deep cleaning, detailing, and eco-friendly products. Book now for a spotless ride!"
-        />
-        <meta 
-          name="keywords" 
-          content="home car wash, car cleaning service, mobile car wash, auto detailing, doorstep car wash" 
-        />
-      </Helmet>
-
       {/* ✅ Main Section */}
       <section className="mx-auto max-w-full px-6 py-10 sm:px-6 lg:px-8 bg-[#031831]">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:items-center md:gap-10">
