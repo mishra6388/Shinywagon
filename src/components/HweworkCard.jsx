@@ -24,7 +24,8 @@ function HweworkCard() {
   return (
     <div className="py-10 bg-gray-100 text-[#031831] text-center ">
       <h2 className="text-3xl font-bold text-[#031831] mb-6">How We Work</h2>
-      <div className="max-w-6xl mx-auto px-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-32 sm:gap-8">
+      <div className="max-w-6xl mx-auto px-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+
 
         {steps.map((step) => (
           <div key={step.id} className="bg-white p-5 rounded-lg shadow-md">
