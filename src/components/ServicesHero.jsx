@@ -1,4 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/autoplay";
+import { Autoplay } from "swiper/modules";
 
 const images = [
   "https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp",
@@ -9,30 +13,7 @@ const images = [
   "https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp",
 ];
 
-// Duplicate first images at the end to create an infinite effect
-const extendedImages = [...images, ...images.slice(0, 3)];
-
 function ServicesHero() {
-  const [index, setIndex] = useState(0);
-  const totalSlides = images.length; // Original slide count
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prevIndex) => prevIndex + 1); // Move forward 1 slide at a time
-    }, 4000); // ⏳ 4s delay
-
-    return () => clearInterval(interval);
-  }, []);
-
-  // Handle infinite loop transition
-  useEffect(() => {
-    if (index === totalSlides) {
-      setTimeout(() => {
-        setIndex(0); // Reset index instantly (without animation)
-      }, 500); // Small delay to avoid flash effect
-    }
-  }, [index, totalSlides]);
-
   return (
     <div
       className="w-full min-h-120 flex flex-col items-center justify-center bg-cover bg-center"
@@ -46,28 +27,35 @@ function ServicesHero() {
         Our Services
       </h2>
 
-      {/* Carousel Container */}
-      <div className="w-full max-w-5xl overflow-hidden relative">
-        <div
-          className="flex transition-transform duration-1000 ease-in-out"
-          style={{
-            transform: `translateX(-${(index * 100) / 3}%)`, // Moves in steps of 3
-            transition: index === totalSlides ? "none" : "transform 1s ease-in-out",
+      {/* Swiper Slider Without Icons */}
+      <div className="w-full max-w-5xl px-4">
+        <Swiper
+          modules={[Autoplay]}
+          spaceBetween={20}
+          slidesPerView={1}
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
           }}
+          autoplay={{ delay: 4000, disableOnInteraction: false }}
+          grabCursor={true} // Enables touch/mouse swiping
         >
-          {extendedImages.map((src, i) => (
-            <div key={i} className="w-1/3 flex-shrink-0 p-2">
-              <img
-                src={src}
-                alt={`Slide ${i + 1}`}
-                className="w-full h-56 rounded-lg object-cover shadow-lg"
-              />
-              <p className="text-center text-white text-sm font-semibold bg-black bg-opacity-60 px-3 py-1 rounded mt-2">
-                Item {i + 1}
-              </p>
-            </div>
+          {images.map((src, i) => (
+            <SwiperSlide key={i}>
+              <div className="w-full p-2">
+                <img
+                  src={src}
+                  alt={`Slide ${i + 1}`}
+                  className="w-full h-56 rounded-lg object-cover shadow-lg"
+                />
+                <p className="text-center text-white text-sm font-semibold bg-black bg-opacity-60 px-3 py-1 rounded mt-2">
+                  Item {i + 1}
+                </p>
+              </div>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </div>
     </div>
   );
