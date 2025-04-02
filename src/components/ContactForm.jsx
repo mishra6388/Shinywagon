@@ -7,12 +7,10 @@ function ContactForm({ isOpen, setIsOpen }) {
   // Prevent scrolling when modal is open
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = "hidden"; // Disable scrolling
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "auto"; // Enable scrolling
+      document.body.style.overflow = "auto";
     }
-
-    // Cleanup function to reset scrolling when component unmounts
     return () => {
       document.body.style.overflow = "auto";
     };
@@ -20,7 +18,6 @@ function ContactForm({ isOpen, setIsOpen }) {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
     emailjs
       .sendForm(
         "YOUR_SERVICE_ID",
@@ -41,11 +38,13 @@ function ContactForm({ isOpen, setIsOpen }) {
       );
   };
 
-  return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-      <div className="bg-gray-100 p-6 rounded-lg shadow-2xl w-96 border border-gray-300">
-        <h2 className="text-2xl font-bold mb-4 text-gray-800 text-center">Contact Us</h2>
+  if (!isOpen) return null;
 
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-[9999]">
+      <div className="bg-gray-100 p-6 rounded-lg shadow-2xl w-96 border border-gray-300 relative">
+        <h2 className="text-2xl font-bold mb-4 text-gray-800 text-center">Contact Us</h2>
+        
         <form ref={form} onSubmit={sendEmail} className="space-y-4">
           <div>
             <label className="block font-medium text-gray-700">Name <span className="text-red-500">*</span></label>
@@ -82,7 +81,7 @@ function ContactForm({ isOpen, setIsOpen }) {
               className="w-full p-2 border border-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900"
             ></textarea>
           </div>
-
+          
           <button 
             type="submit"
             className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg w-full cursor-pointer hover:bg-blue-700"
