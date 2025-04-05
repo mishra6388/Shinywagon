@@ -31,7 +31,7 @@ function Footer() {
   <p className="text-[#fbd112]">
     ✉️ <span className="font-semibold">Email: </span> 
     <a href="mailto:prashant@gmail.com" className="text-white hover:underline hover:text-blue-500">
-      info@shinywagon.in
+      shinywagon.co@gmail.com
     </a>
   </p>
 </div>

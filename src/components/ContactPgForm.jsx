@@ -22,10 +22,10 @@ export default function ContactPgForm() {
 
     emailjs
       .send(
-        "YOUR_SERVICE_ID", // Replace with EmailJS Service ID
-        "YOUR_TEMPLATE_ID", // Replace with EmailJS Template ID
+        "service_yv56l9c", // Replace with EmailJS Service ID
+        "template_3ju29op", // Replace with EmailJS Template ID
         formData,
-        "YOUR_PUBLIC_KEY" // Replace with EmailJS Public Key
+        "LT9iXIclXTF04ZcH8" // Replace with EmailJS Public Key
       )
       .then(
         (response) => {
@@ -101,7 +101,7 @@ export default function ContactPgForm() {
           <button
             type="submit"
             disabled={isSending}
-            className="w-full bg-gray-700 text-white p-3 rounded-md hover:bg-gray-800 transition disabled:bg-gray-400"
+            className="w-full bg-gray-700 text-white p-3 rounded-md hover:cursor-pointer transition disabled:bg-gray-400 "
           >
             {isSending ? "Sending..." : "Send Message"}
           </button>
