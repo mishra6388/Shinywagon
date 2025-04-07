@@ -11,7 +11,7 @@ function HweworkCard() {
       id: 2,
       title: "We Come to You",
       description: "Our professional team arrives at your location with all necessary equipment.",
-      image: "https://hoora.in/wp-content/themes/hoora/assets/img/about-us.png", // Replace with actual image URL
+      image: "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=678,h=692,fit=crop,trim=0;12.485549132947977;0;9.364161849710982/AMq4XNxDqjS1GZ55/red-carpet-1080-x-1080-px-6-mxB48k6l2aTyRxQ1.png", // Replace with actual image URL
     },
     {
       id: 3,

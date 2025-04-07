@@ -49,7 +49,7 @@ const BookingForm = ({ setIsOpen }) => {
           &times;
         </span>
 
-        <h2 style={styles.heading}>Enquiry about email js</h2>
+        <h2 style={styles.heading}>Enquiry about ShinyWagon </h2>
         <form onSubmit={sendEmail} style={styles.form}>
           <input
             type="text"

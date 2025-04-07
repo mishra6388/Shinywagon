@@ -4,13 +4,32 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import { Autoplay } from "swiper/modules";
 
-const images = [
-  "https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp",
-  "https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp",
-  "https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp",
-  "https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp",
-  "https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp",
-  "https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp",
+// Custom services with titles and image URLs
+const services = [
+  {
+    title: "Car Cleaning & Coating",
+    src: "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=678,h=500,fit=crop,trim=0;0;283.53982300884957;0/AMq4XNxDqjS1GZ55/red-carpet-1080-x-1080-px-5-m5KMr7j94ou2jy4p.png",
+  },
+  {
+    title: "Seat Deep Cleaning",
+    src: "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=678,h=500,fit=crop,trim=0;0;283.53982300884957;0/AMq4XNxDqjS1GZ55/red-carpet-1080-x-1080-px-4-YleW5ZZb06tbrJxO.png",
+  },
+  {
+    title: "Exterior & Interior Deep Wash",
+    src: "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=678,h=500,fit=crop,trim=0;0;283.53982300884957;0/AMq4XNxDqjS1GZ55/red-carpet-1080-x-1080-px-3-AMq1pPPk20cQwWRJ.png",
+  },
+  {
+    title: "Interior Deep Cleaning",
+    src: "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=678,h=500,fit=crop,trim=0;0;283.53982300884957;0/AMq4XNxDqjS1GZ55/red-carpet-1080-x-1080-px-2-dJoZNqoOODhKpwDk.png",
+  },
+  {
+    title: "Exterior Deep Wash",
+    src: "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=678,h=500,fit=crop,trim=0;0;283.53982300884957;0/AMq4XNxDqjS1GZ55/red-carpet-1080-x-1080-px-1-dJoZNqo4VPhqKP2x.png",
+  },
+  {
+    title: "Full Body Polishing",
+    src: "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=678,h=500,fit=crop,trim=0;0;283.53982300884957;0/AMq4XNxDqjS1GZ55/red-carpet-1080-x-1080-px-AoPWNkPLZPFrqlyr.png",
+  },
 ];
 
 function ServicesHero() {
@@ -23,11 +42,11 @@ function ServicesHero() {
       }}
     >
       {/* Title */}
-      <h2 className="text-3xl font-bold text-white mb-6 bg-black bg-opacity-60 px-6 py-3 rounded-lg">
+      <h2 className="text-3xl font-bold text-[#031831] mb-6 bg-[#fbd112] bg-opacity-60 px-6 py-3 rounded-lg">
         Our Services
       </h2>
 
-      {/* Swiper Slider Without Icons */}
+      {/* Swiper Slider */}
       <div className="w-full max-w-5xl px-4">
         <Swiper
           modules={[Autoplay]}
@@ -39,18 +58,18 @@ function ServicesHero() {
             1024: { slidesPerView: 3 },
           }}
           autoplay={{ delay: 4000, disableOnInteraction: false }}
-          grabCursor={true} // Enables touch/mouse swiping
+          grabCursor={true}
         >
-          {images.map((src, i) => (
+          {services.map((service, i) => (
             <SwiperSlide key={i}>
               <div className="w-full p-2">
                 <img
-                  src={src}
-                  alt={`Slide ${i + 1}`}
+                  src={service.src}
+                  alt={service.title}
                   className="w-full h-56 rounded-lg object-cover shadow-lg"
                 />
-                <p className="text-center text-white text-sm font-semibold bg-black bg-opacity-60 px-3 py-1 rounded mt-2">
-                  Item {i + 1}
+                <p className="text-center text-[#031831] text-sm font-bold bg-[#fbd112] bg-opacity-60 px-3 py-1 rounded mt-2">
+                  {service.title}
                 </p>
               </div>
             </SwiperSlide>
