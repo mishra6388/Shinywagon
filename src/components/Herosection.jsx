@@ -4,7 +4,7 @@ function HeroSection() {
   const [isOpen, setIsOpen] = useState(false);
   const [ContactForm, setContactForm] = useState(null);
   const [animatedText, setAnimatedText] = useState("");
-  const textArray = ["Waxing and Polishing", "Car Wash", "Vacuum Wash"];
+  const textArray = ["Waxing and Polishing", "Car Wash", "Vaccum Wash"];
   const typingSpeed = 100;
 
   useEffect(() => {
