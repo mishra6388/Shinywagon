@@ -68,7 +68,7 @@ function ServicesHero() {
                   alt={service.title}
                   className="w-full h-56 rounded-lg object-cover shadow-lg"
                 />
-                <p className="text-center text-[#031831] text-sm font-bold bg-[#fbd112] bg-opacity-60 px-3 py-1 rounded mt-2">
+                <p className="text-center text-[#031831] text-sm font-bold bg-[#fbd112] bg-opacity-60 px-3 py-1 rounded mt-2 text-[18px]">
                   {service.title}
                 </p>
               </div>
