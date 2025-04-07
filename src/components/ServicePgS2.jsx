@@ -6,7 +6,7 @@ function ServicePgS2() {
       <div className="hero bg-[#031831] min-h-screen">
         <div className="hero-content flex-col lg:flex-row">
           <img
-            src="http://www.freepngclipart.com/download/car/58454-car-washer-ist-toyota-wash-png-free-photo.png"
+            src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=720,h=479,fit=crop,trim=0;0;361.38461538461536;0/AMq4XNxDqjS1GZ55/red-carpet-1080-x-1080-px-7-mk3v5ErbyXcwZ9EB.png"
             className="lg:w-[800px] lg:h-[500px] sm:w-[400px] sm:h-[300px] rounded-lg bg-[#031831] mx-auto" // Center image and make it responsive
           />
           <div className="text-center lg:text-left px-4 sm:px-8"> {/* Center text on small screens */}
