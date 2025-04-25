@@ -3,6 +3,7 @@ import Herosection from '../components/Herosection'
 import HomeWashing from '../components/HomeWashing'
 import ServicesSection from '../components/ServicesSection'
 import HweworkCard from '../components/HweworkCard'
+import OfferNotification from '../components/OfferNotification'
 
 
 function Home() {
@@ -12,6 +13,7 @@ function Home() {
       <ServicesSection/>
       <HomeWashing/>
       <HweworkCard/>
+      <OfferNotification/>
     </div>
   )
 }

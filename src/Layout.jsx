@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom'
 
 import Footer from './components/Footer'
 import Header from './components/Header'
+import FloatingButtons from './components/FloatingButtons'
 
 
 const Layout = () => {
@@ -10,6 +11,7 @@ const Layout = () => {
    <>
     <Header/>
     <Outlet/>
+    <FloatingButtons/>
     <Footer/>
    </>
   )

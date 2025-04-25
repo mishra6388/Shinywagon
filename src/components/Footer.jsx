@@ -39,18 +39,14 @@ function Footer() {
 
       {/* Social Media Links */}
       <div className="flex justify-center space-x-5">
-        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.facebook.com/profile.php?id=61575645662400" target="_blank" rel="noopener noreferrer">
           <img src="https://img.icons8.com/fluent/30/ffffff/facebook-new.png" alt="Facebook" />
         </a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-          <img src="https://img.icons8.com/fluent/30/ffffff/linkedin-2.png" alt="LinkedIn" />
-        </a>
-        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+       
+        <a href="https://www.instagram.com/shinywagon.in/" target="_blank" rel="noopener noreferrer">
           <img src="https://img.icons8.com/fluent/30/ffffff/instagram-new.png" alt="Instagram" />
         </a>
-        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-          <img src="https://img.icons8.com/fluent/30/ffffff/twitter.png" alt="Twitter" />
-        </a>
+        
         {/* WhatsApp Link */}
         <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">
           <img src="https://img.icons8.com/fluent/30/ffffff/whatsapp.png" alt="WhatsApp" />

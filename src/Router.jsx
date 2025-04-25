@@ -6,6 +6,7 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import Terms from "./pages/Terms";
 import Gallery from "./pages/Gallery";
+import PackagePage from "./components/PackagePage";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,11 @@ const router = createBrowserRouter([
       {
         path: "gallery",
         element: <Gallery/>
+      },
+
+      {
+        path: "packages",
+        element: <PackagePage/>
       }
     
     ],

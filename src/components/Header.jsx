@@ -29,6 +29,7 @@ function Header() {
           <Link to="/about" className={`${isActive("/about")}`}>About Us</Link>
           <Link to="/contact" className={`${isActive("/contact")}`}>Contact Us</Link>
           <Link to="/services" className={`${isActive("/services")}`}>Our Services</Link>
+          <Link to="/packages" className={`${isActive("/packages")} text-xl`}>Packeges</Link>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -49,6 +50,7 @@ function Header() {
           <Link to="/about" className={`${isActive("/about")} text-xl`}>About Us</Link>
           <Link to="/contact" className={`${isActive("/contact")} text-xl`}>Contact Us</Link>
           <Link to="/services" className={`${isActive("/services")} text-xl`}>Our Services</Link>
+          <Link to="/packages" className={`${isActive("/packages")} text-xl`}>Packeges</Link>
         </nav>
       </div>
     </header>
