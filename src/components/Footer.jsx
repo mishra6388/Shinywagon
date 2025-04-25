@@ -48,7 +48,7 @@ function Footer() {
         </a>
         
         {/* WhatsApp Link */}
-        <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">
+        <a href="https://wa.me/918317052865" target="_blank" rel="noopener noreferrer">
           <img src="https://img.icons8.com/fluent/30/ffffff/whatsapp.png" alt="WhatsApp" />
         </a>
       </div>
