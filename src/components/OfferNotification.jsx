@@ -67,7 +67,7 @@ const OfferNotification = () => {
         {/* Close Button */}
         <button
           onClick={handleClose}
-          className="absolute top-2 right-2 text-blue-200 hover:text-white"
+          className="absolute top-2 right-2 text-blue-200 hover:text-white cursor-pointer"
           aria-label="Close"
         >
           <svg
